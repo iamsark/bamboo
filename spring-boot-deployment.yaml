@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: boot-spring
+  name: boot-spring
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: boot-spring
+  template:
+    metadata:
+      labels:
+        app: boot-spring
+    spec:
+      containers:
+      - image: mycholan/test:1.0
+        imagePullPolicy: IfNotPresent
+        name: test        
+      restartPolicy: Always
