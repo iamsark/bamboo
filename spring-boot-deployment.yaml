@@ -15,7 +15,7 @@ spec:
         app: boot-spring
     spec:
       containers:
-      - name: test
+        name: test
         image: mycholan/test:1.0        
         ports:
-        - containerPort: 8080
+          containerPort: 8080
