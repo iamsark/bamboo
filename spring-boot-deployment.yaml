@@ -15,8 +15,7 @@ spec:
         app: boot-spring
     spec:
       containers:
-      - image: mycholan/test:1.0
-        imagePullPolicy: IfNotPresent
-        name: test
+      - name: test
+        image: mycholan/test:1.0        
         ports:
         - containerPort: 8080
