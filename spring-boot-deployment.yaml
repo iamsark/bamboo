@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  labels:
-    app: boot-spring
   name: boot-spring
+  labels:
+    app: boot-spring  
 spec:
   replicas: 1
   selector:
@@ -15,7 +15,7 @@ spec:
         app: boot-spring
     spec:
       containers:
-        name: test
+      - name: test
         image: mycholan/test:1.0        
         ports:
-          containerPort: 8080
+        - containerPort: 8080
