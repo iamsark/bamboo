@@ -1,0 +1,9 @@
+version: '3.7'
+
+# Define services
+services:
+  # App backend service
+  app-server:
+    image: mycholan/boot_test:1.0
+    ports:
+      - "8080:8080" # Forward the exposed port 8080 on the container to port 8080 on the host machine
